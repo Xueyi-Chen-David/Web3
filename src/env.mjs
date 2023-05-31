@@ -23,6 +23,10 @@ export const env = createEnv({
     // Add `.min(1) on ID and SECRET if you want to make sure they're not empty
     DISCORD_CLIENT_ID: z.string(),
     DISCORD_CLIENT_SECRET: z.string(),
+    GOOGLE_ID: z.string(),
+    GOOGLE_SECRET: z.string(),
+    FACEBOOK_ID: z.string(),
+    FACEBOOK_SECRET: z.string(),
   },
 
   /**
@@ -45,5 +49,9 @@ export const env = createEnv({
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     DISCORD_CLIENT_ID: process.env.DISCORD_CLIENT_ID,
     DISCORD_CLIENT_SECRET: process.env.DISCORD_CLIENT_SECRET,
+    GOOGLE_ID: process.env.GOOGLE_ID,
+    GOOGLE_SECRET: process.env.GOOGLE_SECRET,
+    FACEBOOK_ID: process.env.FACEBOOK_ID,
+    FACEBOOK_SECRET: process.env.FACEBOOK_SECRET,
   },
 });
