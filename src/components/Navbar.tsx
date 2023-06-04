@@ -1,6 +1,7 @@
 import { useSession, signIn, signOut } from "next-auth/react"
-import Link from "next/link"
-
+import { SLink } from "./Link"
+import { Button } from "./Button"
+import { GrHomeRounded } from "react-icons/gr"
 
 export default function Navbar() {
     const { data: session } = useSession()
@@ -8,35 +9,38 @@ export default function Navbar() {
 
     return <>
         <nav className="shadow-sm">
-            <ul className="flex justify-between items-center h-10">
-                <div>
+            <ul className="flex justify-between items-center h-16">
+                <div className="px-2">
                     <li>
-                        <Link href='/'>Home</Link>
+                        <SLink href='/' className="flex items-center">
+                            <GrHomeRounded className="w-8" />
+                            Home
+                        </SLink>
                     </li>
                 </div>
-                <div className="flex w-80 justify-around">
+                <div className="flex w-96 justify-around items-center">
                     <li>
-                        <Link href='/about'>About</Link>
+                        <SLink href='/about'>About</SLink>
                     </li>
                     <li>
-                        <Link href='/mint'>Mint NFT</Link>
+                        <SLink href='/mint'>Mint NFT</SLink>
                     </li>
                     {user != null && (
                         <li>
-                            <Link href={`/profiles/${user.email}`}>Profile</Link>
+                            <SLink href={`/profiles/${user.email}`}>Profile</SLink>
                         </li>
                     )}
                     {user == null ? (
                         <li>
-                            <button onClick={() => signIn()}>Sign In</button>
+                            <Button onClick={() => signIn()}>Sign In</Button>
                         </li>
                     ) : (
                         <li>
-                            <button onClick={() => signOut()}>Sign Out</button>
+                            <Button onClick={() => signOut()}>Sign Out</Button>
                         </li>
                     )}
                 </div>
             </ul>
-        </nav>
+        </nav >
     </>
 }

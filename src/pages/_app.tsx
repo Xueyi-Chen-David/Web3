@@ -23,9 +23,9 @@ const MyApp: AppType<{ session: Session | null }> = ({
         />
         <link rel="icon" href="/saturn.png" />
       </Head>
-      <div className="px-8">
+      <div className="">
         <Navbar />
-        <div className="">
+        <div className="px-8 py-8">
           <Component {...pageProps} />
         </div>
       </div>
