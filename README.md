@@ -1,28 +1,35 @@
-# Create T3 App
+<h2 style="text-align: center;">Web3 Project (NFT)</h2>
+<p align="center">
+    <a href="https://github.com/iotaledger/one-click-tangle/blob/master/LICENSE" style="text-decoration:none;"><img src="https://img.shields.io/github/license/iotaledger/one-click-tangle.svg" alt="MIT license"></a>
+</p>
+<p align="center">
+  <a href="#about">About</a> ◈
+  <a href="#prerequisites">Prerequisites</a> ◈
+  <a href="#getting-started">Getting started</a> ◈
+</p>
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+---
 
-## What's next? How do I make an app with this?
+## About
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+This is my Web3 project bootstrapped with `create-t3-app`.
+In this project, I created a website for people to interact with and mint their own NFT.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+<br>
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Prerequisites
 
-## Learn More
+* node
+* npm install
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+<br>
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## Getting Started
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+```console
+npm run dev
+```
+This will create a localhost website on http://localhost:3000.
 
-## How do I deploy this?
+Hope you enjoy it！！！
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
