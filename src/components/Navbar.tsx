@@ -2,6 +2,8 @@ import { useSession, signIn, signOut } from "next-auth/react"
 import { SLink } from "./Link"
 import { Button } from "./Button"
 import { GrHomeRounded } from "react-icons/gr"
+import { ConnectButton } from "web3uikit"
+
 
 export default function Navbar() {
     const { data: session } = useSession()
@@ -18,12 +20,12 @@ export default function Navbar() {
                         </SLink>
                     </li>
                 </div>
-                <div className="flex w-96 justify-around items-center">
+                <div className="flex w-100 justify-around items-center">
                     <li>
                         <SLink href='/about'>About</SLink>
                     </li>
                     <li>
-                        <SLink href='/mint'>Mint NFT</SLink>
+                        <ConnectButton moralisAuth={false} />
                     </li>
                     {user != null && (
                         <li>
